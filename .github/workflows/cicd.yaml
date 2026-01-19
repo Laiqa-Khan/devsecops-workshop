@@ -63,7 +63,7 @@ jobs:
     - name: Patch Deployment With Version
       run: |
         VERSION=${{ steps.version.outputs.version }}
-        kubectl set image deployment/devsecops-app web=ghcr.io/${{ github.repository_owner }}/devsecops-app:$VERSION
+        kubectl set image deployment/devsecops-app web=ghcr.io/Laiqa-Khan/devsecops-app:$VERSION
 
     - name: Wait for Rollout
       run: kubectl rollout status deployment/devsecops-app
